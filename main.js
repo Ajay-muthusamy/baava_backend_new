@@ -156,7 +156,7 @@ function drawTableRowBorders(doc, y, xStart, xEnd, height) {
 
 app.listen(PORT, (err) => {
   if (err) {
-    console.error("Error in creating server:", err);
+    console.error("Error in server creation:", err);
   } else {
     console.log(`Server running on http://localhost:${PORT}`);
   }
