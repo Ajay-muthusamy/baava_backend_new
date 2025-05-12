@@ -1,8 +1,4 @@
 import express from "express";
-<<<<<<< HEAD
-import Stripe from 'stripe';
-=======
->>>>>>> af4a177bf32a20cf36bb19097e5b753726cff0b5
 import  PDFDocument from 'pdfkit';
 import customerSchema from "./Model/CustomerModel.js";
 import fs from 'fs';
@@ -10,11 +6,6 @@ import mongoose from "mongoose";
 import cors from "cors";
 import router from "./route/route.js";
 import "dotenv/config";
-
-<<<<<<< HEAD
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-=======
->>>>>>> af4a177bf32a20cf36bb19097e5b753726cff0b5
 const app = express();
 const PORT = process.env.PORT || 1234;
 
@@ -160,11 +151,8 @@ function drawTableRowBorders(doc, y, xStart, xEnd, height) {
 
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> af4a177bf32a20cf36bb19097e5b753726cff0b5
 app.listen(PORT, (err) => {
   if (err) {
     console.error("Error in server creation:", err);
