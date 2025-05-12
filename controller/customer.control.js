@@ -1,6 +1,7 @@
 import customerSchema from "../Model/CustomerModel.js";
 import updateContent from "../Model/updateModel.js";
 
+<<<<<<< HEAD
 export const customerdetails = async (req, res) => {
     const customerData = req.body;
   
@@ -20,6 +21,28 @@ export const customerdetails = async (req, res) => {
       res.status(500).json({ message: "Data not inserted successfully", error: error.message });
     }
   };
+=======
+export const customerdetails = async(req,res)=>{
+    const customerData = req.body;
+    console.log('Received customer data:', customerData.updatedata.products);
+    try {
+        const user = customerSchema({
+            ...customerData.formData,
+            products:customerData.updatedata.products,
+            totalAmount:customerData.updatedata.totalAmount
+        })
+        
+        await user.save();
+        await product.save();
+        res.status(200).json({message:"data inserted successfully"})
+        console.log('data inserted successfully');
+    } catch (error) {
+        res.status(501).json({message:"data not inserted successfully"})
+        
+    }
+}
+
+>>>>>>> af4a177bf32a20cf36bb19097e5b753726cff0b5
 
 export const adminfetch = async(req,res)=>{
     try {
