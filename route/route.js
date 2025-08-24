@@ -4,7 +4,7 @@ import { adminfetch } from '../controller/customer.control.js';
 import { updateText } from '../controller/customer.control.js';
 import { FetchUpdataData } from '../controller/customer.control.js';
 import { FetchData } from '../controller/customer.control.js';
-
+import { savePhone } from '../controller/Login.controller.js';
 const router = express.Router();
 
 router.post('/data',customerdetails);
@@ -12,5 +12,6 @@ router.get('/order-details',adminfetch);
 router.get('/update-data',FetchData);
 router.post('/update-offer',updateText);
 router.put('/fetch-update-offer/:id',FetchUpdataData);
+router.post('/savephone',savePhone);
 
 export default router;
